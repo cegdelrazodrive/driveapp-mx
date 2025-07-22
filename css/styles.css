@@ -1,0 +1,125 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f0f6fa;
+  background-image: url('../assets/bg/hero-bg.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Imagen del auto */
+.hero-car {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+  max-height: 60vh;
+  z-index: 1;
+}
+
+/* Contenedor centrado */
+.hero-container {
+  width: 80%;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Contenido alineado a la derecha */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  max-width: 100%;
+  gap: 1.25rem;
+}
+
+.hero-content .logo {
+  width: 200px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #00b1e1;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.hero-content .subtitle {
+  font-size: 1.125rem;
+  color: #444;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.cta-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cta-btn {
+  background-color: #00b1e1;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.cta-btn:hover {
+  background-color: #0099c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .hero-car {
+    display: none;
+  }
+
+  .hero-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .cta-container {
+    justify-content: center;
+  }
+}
