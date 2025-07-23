@@ -10,7 +10,7 @@ html, body {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh; /* ✅ Altura más contenida */
   background-color: #f0f6fa;
   background-image: url('../assets/bg/hero-bg.png');
   background-repeat: no-repeat;
@@ -21,6 +21,7 @@ html, body {
   justify-content: center;
   padding: 4rem 1.5rem;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* Imagen del auto */
@@ -30,8 +31,10 @@ html, body {
   top: 50%;
   transform: translateY(-50%);
   height: auto;
-  max-height: 60vh;
+  max-height: 70vh; /* ✅ Altura moderada */
+  width: auto;
   z-index: 1;
+  pointer-events: none; /* Evita bloquear clics */
 }
 
 /* Contenedor centrado */
@@ -121,5 +124,91 @@ html, body {
 
   .cta-container {
     justify-content: center;
+  }
+}
+
+
+.benefits {
+  padding: 4rem 1.5rem 3rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.benefits-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.benefits h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #00b1e1;
+  margin-bottom: 0.5rem;
+}
+
+.benefits .highlight {
+  color: #00b1e1;
+}
+
+.benefits .description {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.benefit-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-items .item {
+  width: 150px;
+}
+
+.benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.benefit-items p {
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: 500;
+  margin: 0;
+}
+
+.benefits-btn {
+  margin: 2rem auto 0;
+  background-color: #00b1e1;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  max-width: fit-content;
+  white-space: nowrap;
+}
+
+.benefits-btn:hover {
+  background-color: #0099c7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .benefit-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
 }
